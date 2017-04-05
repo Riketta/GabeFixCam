@@ -1,6 +1,7 @@
 # World of WarCraft Legion camera zoomer
 GabeFixCam zooming your camera over ingame limit.  
 Current maximum camera range in WoW with macro (/console cameraDistanceMaxFactor) is 39.0, with this tool you can set range to 40 and more.  
+Works only with 64 bit version.  
   
 # Usage
 Start game, enter world and launch tool with range argument (or without - defaul range is 60).  
