@@ -15,7 +15,7 @@ namespace GabeFixCam
         const int PROCESS_VM_WRITE = 0x0020;
         const int PROCESS_VM_OPERATION = 0x0008;
         static IntPtr processHandle;
-        static int gameBuild = 23857;
+        static string gameBuild = "7.2.0.23877";
 
         static void Main(string[] args)
         {
@@ -36,7 +36,7 @@ namespace GabeFixCam
 
                 while (true)
                 {
-                    IntPtr addr = process.MainModule.BaseAddress + 0x1920E98;
+                    IntPtr addr = process.MainModule.BaseAddress + 0x1921EB8;
                     addr = (IntPtr)ReadInt64(addr) + 0x3328;
                     addr = (IntPtr)ReadInt64(addr) + 0x23C;
 
