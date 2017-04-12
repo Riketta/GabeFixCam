@@ -11,11 +11,12 @@ namespace GabeFixCam
 {
     class Program
     {
+        const int baseOffset = 0x1921EF8;
         const int PROCESS_WM_READ = 0x0010;
         const int PROCESS_VM_WRITE = 0x0020;
         const int PROCESS_VM_OPERATION = 0x0008;
         static IntPtr processHandle;
-        static string gameBuild = "7.2.0.23877";
+        static string gameBuild = "7.2.0.23911";
 
         static void Main(string[] args)
         {
@@ -36,7 +37,7 @@ namespace GabeFixCam
 
                 while (true)
                 {
-                    IntPtr addr = process.MainModule.BaseAddress + 0x1921EB8;
+                    IntPtr addr = process.MainModule.BaseAddress + baseOffset;
                     addr = (IntPtr)ReadInt64(addr) + 0x3328;
                     addr = (IntPtr)ReadInt64(addr) + 0x23C;
 
